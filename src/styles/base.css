@@ -13,8 +13,8 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    radial-gradient(circle at top left, rgba(219, 231, 242, 0.7), transparent 32%),
-    radial-gradient(circle at right 20%, rgba(244, 184, 191, 0.5), transparent 28%),
+    radial-gradient(circle at top left, rgba(219, 231, 242, 0.55), transparent 34%),
+    radial-gradient(circle at right 20%, rgba(244, 184, 191, 0.35), transparent 30%),
     var(--color-page);
   color: var(--color-muted);
   font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
@@ -51,24 +51,24 @@ button {
 h1,
 h2,
 h3 {
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-size: clamp(2.8rem, 7vw, 5rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  font-size: clamp(1.45rem, 3.5vw, 2.15rem);
 }
 
 p,
 li,
 input,
 select {
-  font-size: clamp(0.98rem, 1.3vw, 1.05rem);
+  font-size: clamp(0.98rem, 1.1vw, 1.03rem);
 }
 
 ::selection {
@@ -76,6 +76,6 @@ select {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-ink);
-  outline-offset: 2px;
+  outline: 2px solid rgba(17, 17, 17, 0.55);
+  outline-offset: 3px;
 }

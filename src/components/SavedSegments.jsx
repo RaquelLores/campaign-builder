@@ -1,4 +1,4 @@
-export default function SavedSegments({ campaigns }) {
+export default function SavedSegments({ campaigns, onDeleteCampaign }) {
   return (
     <aside className="panel">
       <div className="panel__header">
@@ -20,7 +20,17 @@ export default function SavedSegments({ campaigns }) {
             <li key={`${campaign.name}-${index}`} className="saved-card">
               <div className="saved-card__header">
                 <strong>{campaign.name}</strong>
-                <span className="pill">{campaign.count}</span>
+                <div className="saved-card__actions">
+                  <span className="pill">{campaign.count}</span>
+                  <button
+                    className="delete-btn"
+                    onClick={() => onDeleteCampaign(index)}
+                    title="Delete this segment"
+                    aria-label={`Delete ${campaign.name}`}
+                  >
+                    🗑️
+                  </button>
+                </div>
               </div>
 
               <div className="saved-card__meta">
